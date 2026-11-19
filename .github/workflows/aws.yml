@@ -59,5 +59,5 @@ jobs:
             docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG &&
             docker stop app || true &&
             docker rm app || true &&
-            docker run -d --name app -p 80:80 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+            docker run -d --name app -p 80:8000 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           "
